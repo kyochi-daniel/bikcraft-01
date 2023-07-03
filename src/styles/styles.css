@@ -1,0 +1,301 @@
+:root {
+  --grey-100: #e6e6e6;
+  --grey-300: #c6c6c6;
+  --red-400: #ee2211;
+  --red-600: #a11d11;
+  --white: #fff;
+  --black: #000;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 3.75rem 0;
+}
+
+.navbar {
+  list-style: none;
+
+  text-transform: uppercase;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.navbar a {
+  background-color: var(--white);
+
+  padding: 0.9375rem 1.875rem;
+
+  border-radius: 4px;
+
+  color: var(--black);
+
+  text-decoration: none;
+
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+  border-color: var(--red-400);
+}
+
+main {
+  margin: 3.75rem 0;
+}
+
+.container {
+  max-width: 62.5rem;
+
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "introduction image"
+    "introduction image"
+    "subtitle benefits"
+    "subtitle benefits";
+}
+
+.introduction {
+  grid-area: introduction;
+
+  text-align: right;
+
+  padding: 2.5rem;
+  background-color: var(--white);
+
+  position: relative;
+
+  display: grid;
+  gap: 1.25rem;
+  align-content: center;
+  justify-items: end;
+}
+
+.introduction h1 {
+  font-size: 2rem;
+}
+
+.introduction::before {
+  content: "";
+  display: inline-block;
+  width: 3.75rem;
+  height: 0.25rem;
+
+  position: absolute;
+  top: 1.875rem;
+  right: -1.875rem;
+
+  background: var(--red-400);
+}
+
+.button-introduction {
+  background-color: var(--red-400);
+  color: var(--white);
+
+  padding: 0.9375rem 1.875rem;
+
+  border-radius: 4px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: 0.2s;
+}
+
+.button-introduction:hover {
+  background-color: var(--red-600);
+}
+
+.image-bikcraft {
+  grid-area: image;
+
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+}
+
+.subtitle {
+  grid-area: subtitle;
+
+  font-size: 4rem;
+
+  text-align: end;
+  align-self: center;
+  text-transform: uppercase;
+
+  padding: 2.5rem;
+
+  color: var(--grey-300);
+
+  background-image: url("/src/assets/onda.svg");
+}
+
+.benefits {
+  grid-area: benefits;
+
+  background-color: var(--white);
+
+  padding: 2.5rem;
+}
+
+.item-benefits {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.625rem 1.25rem;
+  padding: 1.25rem;
+
+  border-left: 4px solid transparent;
+}
+
+.item-benefits:nth-child(odd) {
+  background-color: var(--grey-100);
+}
+
+.item-benefits:first-child {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.item-benefits:last-child {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.item-benefits:hover {
+  border-left: 4px solid var(--red-400);
+}
+
+.item-benefits h2 {
+  font-size: 1.25rem;
+}
+
+.item-benefits p {
+  grid-column: 2;
+}
+
+footer {
+  background-color: var(--white);
+
+  width: 100%;
+  padding: 2.5rem;
+
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  .container-benefits {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "introduction"
+      "image"
+      "subtitle"
+      "benefits";
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    margin: 2.25rem 0;
+  } 
+
+  main {
+    margin: 2.25rem 0;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "introduction"
+      "image"
+      "subtitle"
+      "benefits";
+  }
+  
+  .introduction {
+    text-align: left;
+    justify-items: start;
+  }
+
+  .introduction::before {
+    display: none;
+  }
+
+  .navbar {
+    gap: 0.875rem;
+  }
+  
+  .navbar a {
+    padding: 0.8125rem 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .introduction h1 {
+    font-size: 1.375rem;
+  }
+
+  .introduction p {
+    font-size: 1.125rem;
+  }
+
+  .button-introduction {
+    padding: 0.9375rem 1.25rem;
+    width: 100%;
+    
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 2.5rem;
+  }
+  
+  .benefits {
+    padding: 1.25rem;
+  }
+
+  .item-benefits {
+    gap: 0.375rem 0.625rem;
+
+    border-left: 3px solid transparent;
+  }
+
+  .item-benefits h2 {
+    font-size: 1.10rem;
+  }
+  
+  .item-benefits p {
+    font-size: 1.125rem;
+  }
+
+  .item-benefits:hover {
+    border-left: 3px solid var(--red-400);
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+}
