@@ -118,7 +118,7 @@ main {
   background-color: var(--red-600);
 }
 
-.image-bikcraft {
+.image-bikcraft img {
   grid-area: image;
 
   height: 100%;
