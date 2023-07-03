@@ -215,7 +215,7 @@ footer {
 @media (max-width: 600px) {
   .logo {
     margin: 2.25rem 0;
-  } 
+  }
 
   main {
     margin: 2.25rem 0;
@@ -229,7 +229,7 @@ footer {
       "subtitle"
       "benefits";
   }
-  
+
   .introduction {
     text-align: left;
     justify-items: start;
@@ -242,7 +242,7 @@ footer {
   .navbar {
     gap: 0.875rem;
   }
-  
+
   .navbar a {
     padding: 0.8125rem 1.25rem;
   }
@@ -264,15 +264,19 @@ footer {
   .button-introduction {
     padding: 0.9375rem 1.25rem;
     width: 100%;
-    
+
     font-size: 0.875rem;
     text-align: center;
+  }
+
+  .image-bikcraft {
+    max-width: 100%;
   }
 
   .subtitle {
     font-size: 2.5rem;
   }
-  
+
   .benefits {
     padding: 1.25rem;
   }
@@ -284,9 +288,9 @@ footer {
   }
 
   .item-benefits h2 {
-    font-size: 1.10rem;
+    font-size: 1.1rem;
   }
-  
+
   .item-benefits p {
     font-size: 1.125rem;
   }
